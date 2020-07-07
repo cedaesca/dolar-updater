@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../libraries/bootstrap.min.css">
+    <title>Actualizador de dólar</title>
+</head>
+<body>
+    <div class="container-fluid mt-5">
+        <h1 class="text-center">Actualizador de dólar</h1>
+        <div class="row mt-5">
+          <div class="col-sm-12 d-flex justify-content-center">
+            <form action="">
+              <div class="form-group">
+                <label for="currency">Moneda</label>
+                <select name="" id="currency" class="form-control">
+                  <option value="">placeholder</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="newCurrencyValue">Nuevo valor</label>
+                <input type="number" step="0.01" id="newCurrencyValue" class="form-control">
+              </div>
+              <button id="currency-update" type="submit" class="btn btn-primary btn-block">Actualizar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+  
+      <footer class="d-flex justify-content-center mt-5">
+        <small>Desarollado por <a href="https://github.com/cedaesca" target="_blank">César Escudero</a></small>
+      </footer>
+
+      <script>
+        const Swal = require('sweetalert2');
+        const { ipcRenderer } = require('electron');
+      </script>
+      <script src="../assets/settingsValidator.js"></script>
+      <script src="../events/onSettingsSaved.js"></script>
+      <script src="../events/onConnectionTested.js"></script>
+      <script src="../database/currencyManagement.js"></script>
+</body>
+</html>
